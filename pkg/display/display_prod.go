@@ -77,7 +77,7 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 		chromedp.Flag("disable-breakpad", true),
 		chromedp.Flag("disable-client-side-phishing-detection", true),
 		chromedp.Flag("disable-default-apps", true),
-		//chromedp.Flag("disable-dev-shm-usage", true),
+		chromedp.Flag("disable-dev-shm-usage", true),
 		chromedp.Flag("disable-extensions", true),
 		chromedp.Flag("disable-features", "site-per-process,TranslateUI,BlinkGenPropertyTrees"),
 		chromedp.Flag("disable-hang-monitor", true),
@@ -100,15 +100,10 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 		chromedp.Flag("window-size", fmt.Sprintf("%d,%d", width, height)),
 		chromedp.Flag("display", conf.Display),
 		
-		chromedp.Flag("proxy-server","'direct://'"),
-		chromedp.Flag("proxy-bypass-list","*"),
-		chromedp.Flag("enable-logging", "stderr"),
-		chromedp.Flag("log-level","0"),
-		chromedp.Flag("enable-crash-reporter-for-testing",true),
-		chromedp.Flag("in-process-gpu",true),
-		chromedp.Flag("use-gl","swiftshader"),
-		chromedp.Flag("single-process",true),
-		
+		chromedp.Flag("disable-gpu", true),
+		chromedp.Flag("disable-setuid-sandbox",true),
+		chromedp.Flag("disable-web-security", true),
+		chromedp.Flag("allow-running-insecure-content", true),
 	}
 
 	if conf.Insecure {
