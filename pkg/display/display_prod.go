@@ -94,6 +94,7 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 
 		// custom args
 		//chromedp.Flag("kiosk", true),
+		chromedp.Flag("headless",false),
 		chromedp.Flag("no-sandbox",true),
 		chromedp.Flag("allow-http-screen-capture",true),
 		chromedp.Flag("enable-experimental-web-platform-features",true),
