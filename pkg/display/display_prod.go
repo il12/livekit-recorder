@@ -92,8 +92,8 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 		chromedp.Flag("safebrowsing-disable-auto-update", true),
 		chromedp.Flag("password-store", "basic"),
 		chromedp.Flag("use-mock-keychain", true),
-		chromedp.Flag("proxy-server","'direct://'");
-		chromedp.Flag("proxy-bypass-list","*");
+		chromedp.Flag("proxy-server","'direct://'"),
+		chromedp.Flag("proxy-bypass-list","*"),
 
 		// custom args
 		chromedp.Flag("kiosk", true),
