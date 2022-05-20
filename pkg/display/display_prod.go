@@ -107,7 +107,7 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 		chromedp.Flag("enable-crash-reporter-for-testing",true),
 		chromedp.Flag("in-process-gpu",true),
 		chromedp.Flag("use-gl","swiftshader"),
-		chromedp.Flag("single-process",true"),
+		chromedp.Flag("single-process",true),
 		
 	}
 
