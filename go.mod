@@ -7,7 +7,7 @@ require (
 	github.com/Azure/azure-storage-blob-go v0.14.0
 	github.com/aws/aws-sdk-go v1.40.55
 	github.com/chromedp/cdproto v0.0.0-20220131204822-e6abebe7b8cd
-	github.com/chromedp/chromedp v0.7.7
+	github.com/il12/chromedp v0.7.7
 	github.com/go-logr/zapr v1.0.0
 	github.com/go-redis/redis/v8 v8.11.3
 	github.com/livekit/protocol v0.11.1-0.20211215011801-f77609470e70
