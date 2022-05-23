@@ -13,7 +13,7 @@ import (
 	"strings"
 
 	"github.com/chromedp/cdproto/runtime"
-	"github.com/chromedp/chromedp"
+	"github.com/il12/chromedp"
 	"github.com/livekit/protocol/livekit"
 	"github.com/livekit/protocol/logger"
 
