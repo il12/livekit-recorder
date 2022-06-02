@@ -93,13 +93,11 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 		chromedp.Flag("use-mock-keychain", true),
 
 		// custom args
-		//chromedp.Flag("kiosk", true),
+		chromedp.Flag("kiosk", true),
 		chromedp.Flag("headless",false),
 		chromedp.Flag("no-sandbox",true),
 		chromedp.Flag("allow-http-screen-capture",true),
 		chromedp.Flag("enable-experimental-web-platform-features",true),
-		chromedp.Flag("start-maximized",true),
-		chromedp.Flag("start-fullscreen",true),
 		chromedp.Flag("ignore-certificate-errors",true),
 		chromedp.Flag("enable-automation", false),
 		chromedp.Flag("autoplay-policy", "no-user-gesture-required"),
@@ -107,7 +105,6 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 		chromedp.Flag("window-size", fmt.Sprintf("%d,%d", width, height)),
 		chromedp.Flag("display", conf.Display),
 		chromedp.Flag("disable-gpu", true),
-		chromedp.Flag("disable-setuid-sandbox",true),
 	}
 
 	if conf.Insecure {
