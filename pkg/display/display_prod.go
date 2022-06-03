@@ -98,6 +98,7 @@ func (d *Display) launchChrome(conf *config.Config, url string, width, height in
 		chromedp.Flag("no-sandbox",true),
 		chromedp.Flag("allow-http-screen-capture",true),
 		chromedp.Flag("enable-experimental-web-platform-features",true),
+		chromedp.Flag("disabled-acceleration-video-decode",false),
 		chromedp.Flag("ignore-certificate-errors",true),
 		chromedp.Flag("enable-automation", false),
 		chromedp.Flag("autoplay-policy", "no-user-gesture-required"),
